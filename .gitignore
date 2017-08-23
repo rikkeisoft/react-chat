@@ -1,2 +1,5 @@
-./chat-client/node_modules
-./chat-server/node_modules
+chat-client/node_modules
+chat-server/node_modules
+./README.md
+npm-debug.log
+chat-server/LICENSE
