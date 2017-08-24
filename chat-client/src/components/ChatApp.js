@@ -30,10 +30,9 @@ class ChatApp extends Component{
 
   render(){
     return(
+      //TODO: add Messages component and ChatInput component
       <div className="container">
         <h3>React chat app</h3>
-        <Messages messages={this.state.messages} />
-        <ChatInput onSend={this.sendHandler} />
       </div>
     )
   }
