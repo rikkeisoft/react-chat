@@ -5,24 +5,12 @@ class ChatInput extends React.Component{
   constructor(props){
     super(props);
     this.state = { chatInput: ''};
-    this.textChangeHandler = this.textChangeHandler.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
+    //TODO: 
+    //Handle text change event and submit message event
   }
 
-  textChangeHandler = (event) =>{
-    this.setState({
-      chatInput: event.target.value
-    })
-  };
-  submitHandler = (event) =>{
-    event.preventDefault();
-    this.props.onSend(this.state.chatInput);
-    this.setState(
-      {
-        chatInput: ''
-      }
-    )
-  };
+  //TODO:
+  //text change and submit event
 
   render(){
     return(
