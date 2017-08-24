@@ -4,8 +4,7 @@ import Message from './Message';
 class Messages extends React.Component{
 
   componentDidUpdate(){
-    const objDiv = document.getElementById('messageList');
-    objDiv.scrollTop = objDiv.scrollHeight;
+    //TODO: function when messages component update
   }
 
   render(){
@@ -13,10 +12,7 @@ class Messages extends React.Component{
       (message, i) => {
         return(
           <Message
-            key={i}
-            username={message.username}
-            message={message.message}
-            fromMe={message.fromMe}
+            //TODO: Loop through all the messages in the state and create a Message component
           />
         )
     });
