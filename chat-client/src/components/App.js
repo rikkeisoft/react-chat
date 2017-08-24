@@ -8,18 +8,10 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = { username: ''};
-
-    this.usernameChangeHandler =  this.usernameChangeHandler.bind(this);
-    this.usernameSubmitHandler = this.usernameSubmitHandler.bind(this);
+    //TODO: user submit event bind
   }
 
-  usernameChangeHandler = (event) =>{
-    this.setState({ username:event.target.value});
-  };
-  usernameSubmitHandler = (event) =>{
-    event.preventDefault();
-    this.setState({ submitted: true, username: this.state.username});
-  };
+  //TODO: user submit event
 
   render() {
     if(this.state.submitted){
@@ -29,23 +21,13 @@ class App extends Component {
       );
     }
     return (
+      //TODO: user name input form
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
           <h2>CHAT</h2>
         </div>
-        <form
-          className="username-container"
-          onSubmit={this.usernameSubmitHandler}>
-          <div>
-            <input
-              type="text"
-              onChange={this.usernameChangeHandler}
-              placeholder="Enter a username..."
-              required
-            />
-          </div>
-        </form>
+        
       </div>
     );
   }
