@@ -18,29 +18,15 @@ class ChatApp extends Component{
 
     //connect to server
     this.socket = io(config.api, { query: `username= ${props.username}` }).connect();
-    //listen for message from server
-    this.socket.on('server:message', message =>{
-      this.addMessage(message);
-    })
+    //TODO: 
+    //listen for message from server and show in messages box
+    
   }
 
   sendHandler = (message)=>{
-    const messageObject = {
-      username: this.props.username,
-      message
-    }
-
-    this.socket.emit('client:message', messageObject);
-    messageObject.fromMe = true;
-    this.addMessage(messageObject);
+    //TODO:
+    //function when user send a message 
   };
-
-  addMessage = (message)=>{
-    const messages = this.state.messages;
-    messages.push(message);
-    this.setState({ message });
-  };
-
 
   render(){
     return(
