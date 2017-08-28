@@ -1,4 +1,4 @@
-#Simple Chat API
+# Simple Chat API
 A simple chat
 
 Start the server API by running:
