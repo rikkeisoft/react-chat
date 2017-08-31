@@ -1,4 +1,4 @@
-# Simple Chat API
+# React Chat
 ## A simple chat with React & Socket.IO
 
 Start the server API by running:
