@@ -1,5 +1,5 @@
 # Simple Chat API
-A simple chat
+## A simple chat with React & Socket.IO
 
 Start the server API by running:
 ```
@@ -20,3 +20,8 @@ npm install
 
 npm start
 ```
+
+
+## Resources
+- [Presentation](https://goo.gl/L39fYg)
+- [Report](https://goo.gl/AokwNV)
