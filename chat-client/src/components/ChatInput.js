@@ -1,38 +1,34 @@
-import React from 'react';
+import React from 'react'
 
-class ChatInput extends React.Component{
-
-  constructor(props){
-    super(props);
-    this.state = { chatInput: ''};
-    this.textChangeHandler = this.textChangeHandler.bind(this);
-    this.submitHandler = this.submitHandler.bind(this);
+class ChatInput extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { chatInput: '' }
+    this.textChangeHandler = this.textChangeHandler.bind(this)
+    this.submitHandler = this.submitHandler.bind(this)
   }
 
-  textChangeHandler = (event) =>{
+  textChangeHandler = event => {
     this.setState({
       chatInput: event.target.value
     })
-  };
-  submitHandler = (event) =>{
-    event.preventDefault();
-    this.props.onSend(this.state.chatInput);
-    this.setState(
-      {
-        chatInput: ''
-      }
-    )
-  };
+  }
+  submitHandler = event => {
+    event.preventDefault()
+    this.props.onSend(this.state.chatInput)
+    this.setState({
+      chatInput: ''
+    })
+  }
 
-  render(){
-    return(
-      <form className="chat-input"
-            onSubmit={this.submitHandler}>
+  render() {
+    return (
+      <form className='chat-input' onSubmit={this.submitHandler}>
         <input
-          type="text"
+          type='text'
           onChange={this.textChangeHandler}
           value={this.state.chatInput}
-          placeholder="Write a message..."
+          placeholder='Write a message...'
           required
         />
       </form>
@@ -40,6 +36,6 @@ class ChatInput extends React.Component{
   }
 }
 
-ChatInput.defaultProps = {};
+ChatInput.defaultProps = {}
 
-export default ChatInput;
+export default ChatInput
