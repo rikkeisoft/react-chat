@@ -1,25 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-class Message extends React.Component{
-  render(){
-    const fromMe = this.props.fromMe ? 'from-me' : '';
-    return(
+class Message extends React.Component {
+  render() {
+    const fromMe = this.props.fromMe ? 'from-me' : ''
+    return (
       <div className={`message ${fromMe}`}>
-        <div className="username">
-          {this.props.username}
-        </div>
-        <div className="message-body">
-          {this.props.message}
-        </div>
+        <div className='username'>{this.props.username}</div>
+        <div className='message-body'>{this.props.message}</div>
       </div>
     )
   }
 }
 
-Message.defaultProps ={
+Message.defaultProps = {
   message: '',
   username: '',
   fromMe: false
-};
+}
 
-export default Message;
+export default Message
